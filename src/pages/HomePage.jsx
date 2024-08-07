@@ -14,7 +14,7 @@ const HomePage = () => {
     const fetchUsers = async () => {
       try {
        // const response = await fetch('http://localhost:8080/api/pokemon-owners');
-       const response = await fetch('https://pokemon-backend-production-bdc0.up.railway.app/api/pokemon-owners');
+       const response = await fetch('https://pokemon-backend-production-b16f.up.railway.app/api/pokemon-owners');
 
        const data = await response.json();
         setUsers(data);
@@ -31,12 +31,12 @@ const HomePage = () => {
       if (selectedUser) {
         try {
         //  const response = await fetch(`http://localhost:8080/api/pokemons/owner/${selectedUser}`);
-        const response = await fetch(`https://pokemon-backend-production-bdc0.up.railway.app/api/pokemons/owner/${selectedUser}`);
+        const response = await fetch(`https://pokemon-backend-production-b16f.up.railway.app/api/pokemons/owner/${selectedUser}`);
 
         const data = await response.json();
           setPokemons(data);
           
-          const detailsResponse = await fetch(`http://localhost:8080/api/pokemons/owner/${selectedUser}`);
+          const detailsResponse = await fetch(`https://pokemon-backend-production-b16f.up.railway.app/api/pokemons/owner/${selectedUser}`);
           const detailsData = await detailsResponse.json();
           setPokemonDetails(detailsData);
         } catch (error) {

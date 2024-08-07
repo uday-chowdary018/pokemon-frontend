@@ -14,7 +14,7 @@ const AddPokemonPage = () => {
     const fetchPokemonOwners = async () => {
       try {
      //   const response = await fetch('http://localhost:8080/api/pokemon-owners');
-     const response = await fetch('https://pokemon-backend-production-bdc0.up.railway.app/api/pokemon-owners');
+     const response = await fetch('https://pokemon-backend-production-b16f.up.railway.app/api/pokemon-owners');
 
      const data = await response.json();
         if (Array.isArray(data)) {
@@ -42,7 +42,7 @@ const handleSubmit = async (e) => {
     };
 
    // const response = await fetch('http://localhost:8080/api/pokemons', {
-    const response = await fetch('https://pokemon-backend-production-bdc0.up.railway.app/api/pokemons', {
+    const response = await fetch('https://pokemon-backend-production-b16f.up.railway.app/api/pokemons', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

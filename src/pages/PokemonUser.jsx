@@ -22,7 +22,7 @@ const AddPokemon = () => {
     const fetchPokemonNames = async () => {
       try {
       //  const response = await fetch('http://localhost:8080/api/pokemons');
-      const response = await fetch('https://pokemon-backend-production-bdc0.up.railway.app/api/pokemons');
+      const response = await fetch('https://pokemon-backend-production-b16f.up.railway.app/api/pokemons');
 
       const data = await response.json();
         if (Array.isArray(data)) {
@@ -43,7 +43,7 @@ const AddPokemon = () => {
       if (selectedPokemon) {
         try {
          // const response = await fetch(`http://localhost:8080/api/pokemons/name/${selectedPokemon}`);
-         const response = await fetch(`https://pokemon-backend-production-bdc0.up.railway.app/api/pokemons/name/${selectedPokemon}`);
+         const response = await fetch(`https://pokemon-backend-production-b16f.up.railway.app/api/pokemons/name/${selectedPokemon}`);
 
          const data = await response.json();
           if (data && data.pokemonAbility) {
@@ -65,7 +65,7 @@ const AddPokemon = () => {
       if (pokemonId) {
         try {
        //   const response = await fetch(`http://localhost:8080/api/pokemons/${pokemonId}`);
-       const response = await fetch(`https://pokemon-backend-production-bdc0.up.railway.app/api/pokemons/${pokemonId}`);
+       const response = await fetch(`https://pokemon-backend-production-b16f.up.railway.app/api/pokemons/${pokemonId}`);
 
        const data = await response.json();
           setFormData(data);
@@ -90,9 +90,10 @@ const AddPokemon = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      //url changed
       const url = pokemonId
-        ? `http://localhost:8080/api/pokemons/${pokemonId}`
-        : `http://localhost:8080/api/pokemons`;
+        ? `https://pokemon-backend-production-b16f.up.railway.app/api/pokemons/${pokemonId}`
+        : `https://pokemon-backend-production-b16f.up.railway.app/api/pokemons`;
       const method = pokemonId ? 'PUT' : 'POST';
 
       const response = await fetch(url, {

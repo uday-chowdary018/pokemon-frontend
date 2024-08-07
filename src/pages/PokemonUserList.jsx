@@ -11,8 +11,8 @@ const PokemonUserList = () => {
     const fetchPokemonUsers = async () => {
       try {
       //  const response = await fetch('http://localhost:8080/api/pokemons');
-      const response = await fetch('https://pokemon-backend-production-bdc0.up.railway.app/api/pokemons');
-
+      const response = await fetch('https://pokemon-backend-production-b16f.up.railway.app/api/pokemons');
+     
       const data = await response.json();
         console.log(data);
         if (Array.isArray(data)) {
