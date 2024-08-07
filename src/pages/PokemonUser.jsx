@@ -21,8 +21,10 @@ const AddPokemon = () => {
   useEffect(() => {
     const fetchPokemonNames = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/pokemons');
-        const data = await response.json();
+      //  const response = await fetch('http://localhost:8080/api/pokemons');
+      const response = await fetch('https://pokemon-backend-production-bdc0.up.railway.app/api/pokemons');
+
+      const data = await response.json();
         if (Array.isArray(data)) {
           setPokemonNames(data.map(pokemon => pokemon.pokemonName.trim()));
         } else {
@@ -40,8 +42,10 @@ const AddPokemon = () => {
     const fetchPokemonAbilities = async () => {
       if (selectedPokemon) {
         try {
-          const response = await fetch(`http://localhost:8080/api/pokemons/name/${selectedPokemon}`);
-          const data = await response.json();
+         // const response = await fetch(`http://localhost:8080/api/pokemons/name/${selectedPokemon}`);
+         const response = await fetch(`https://pokemon-backend-production-bdc0.up.railway.app/api/pokemons/name/${selectedPokemon}`);
+
+         const data = await response.json();
           if (data && data.pokemonAbility) {
             setPokemonAbilities([data.pokemonAbility]); 
           } else {
@@ -60,8 +64,10 @@ const AddPokemon = () => {
     const fetchExistingPokemonData = async () => {
       if (pokemonId) {
         try {
-          const response = await fetch(`http://localhost:8080/api/pokemons/${pokemonId}`);
-          const data = await response.json();
+       //   const response = await fetch(`http://localhost:8080/api/pokemons/${pokemonId}`);
+       const response = await fetch(`https://pokemon-backend-production-bdc0.up.railway.app/api/pokemons/${pokemonId}`);
+
+       const data = await response.json();
           setFormData(data);
           setSelectedPokemon(data.pokemonName);
         } catch (error) {

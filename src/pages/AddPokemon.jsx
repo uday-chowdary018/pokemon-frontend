@@ -13,8 +13,10 @@ const AddPokemonPage = () => {
   useEffect(() => {
     const fetchPokemonOwners = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/pokemon-owners');
-        const data = await response.json();
+     //   const response = await fetch('http://localhost:8080/api/pokemon-owners');
+     const response = await fetch('https://pokemon-backend-production-bdc0.up.railway.app/api/pokemon-owners');
+
+     const data = await response.json();
         if (Array.isArray(data)) {
           setPokemonOwners(data);
         } else {
@@ -39,7 +41,8 @@ const handleSubmit = async (e) => {
       numberOfPokemon: parseInt(numberOfPokemon, 10), 
     };
 
-    const response = await fetch('http://localhost:8080/api/pokemons', {
+   // const response = await fetch('http://localhost:8080/api/pokemons', {
+    const response = await fetch('https://pokemon-backend-production-bdc0.up.railway.app/api/pokemons', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
