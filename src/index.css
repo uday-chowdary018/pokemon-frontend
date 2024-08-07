@@ -1,0 +1,165 @@
+
+
+
+.PokenonUser-container, .add-pokemon-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family:  Arial;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .add-button{
+      background-color: #218838;
+  }
+  
+  .add-button:hover {
+    background-color: #218838;
+  }
+  
+  /* PokemonUserList.css */
+.pokemon-user-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+
+
+.table-container {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table-container th,
+ td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+.delete-button {
+  background-color:white;
+  color: rgb(11, 10, 10);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover{
+  background-color: #c82333;
+}
+
+a {
+  color: #0d0e0f;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: white;
+  cursor:pointer ;
+}
+
+
+
+.delete-all-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.delete-all-button:hover {
+  background-color: #c82333;
+}
+.home-page-container{
+   max-width: 900px;
+   margin: 0 auto;
+   padding: 20px;
+}
+.home-page-table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.home-page-table th
+,td{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.select-pokemon{
+  background-color: #929597;
+}
+.pokemon-go-button,.pokemon-flee-button,.pokemon-cease-button{
+  background-color:  #868784;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+  
+
+}
+button:hover {
+  background-color: #0056b3;
+}
+.disabled,:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+
+
