@@ -21,8 +21,8 @@ const AddPokemon = () => {
   useEffect(() => {
     const fetchPokemonNames = async () => {
       try {
-      //  const response = await fetch('http://localhost:8080/api/pokemons');
-      const response = await fetch('https://pokemon-backend-production-b16f.up.railway.app/api/pokemons');
+     const response = await fetch('http://localhost:8080/api/pokemons');
+    //  const response = await fetch('https://pokemon-backend-production-b16f.up.railway.app/api/pokemons');
 
       const data = await response.json();
         if (Array.isArray(data)) {
@@ -42,8 +42,8 @@ const AddPokemon = () => {
     const fetchPokemonAbilities = async () => {
       if (selectedPokemon) {
         try {
-         // const response = await fetch(`http://localhost:8080/api/pokemons/name/${selectedPokemon}`);
-         const response = await fetch(`https://pokemon-backend-production-b16f.up.railway.app/api/pokemons/name/${selectedPokemon}`);
+          const response = await fetch(`http://localhost:8080/api/pokemons/name/${selectedPokemon}`);
+       //  const response = await fetch(`https://pokemon-backend-production-b16f.up.railway.app/api/pokemons/name/${selectedPokemon}`);
 
          const data = await response.json();
           if (data && data.pokemonAbility) {
@@ -64,8 +64,8 @@ const AddPokemon = () => {
     const fetchExistingPokemonData = async () => {
       if (pokemonId) {
         try {
-       //   const response = await fetch(`http://localhost:8080/api/pokemons/${pokemonId}`);
-       const response = await fetch(`https://pokemon-backend-production-b16f.up.railway.app/api/pokemons/${pokemonId}`);
+         const response = await fetch(`http://localhost:8080/api/pokemons/${pokemonId}`);
+      // const response = await fetch(`https://pokemon-backend-production-b16f.up.railway.app/api/pokemons/${pokemonId}`);
 
        const data = await response.json();
           setFormData(data);
@@ -92,8 +92,8 @@ const AddPokemon = () => {
     try {
       //url changed
       const url = pokemonId
-        ? `https://pokemon-backend-production-b16f.up.railway.app/api/pokemons/${pokemonId}`
-        : `https://pokemon-backend-production-b16f.up.railway.app/api/pokemons`;
+        ? `http://localhost:8080/api/pokemons/${pokemonId}`
+        : `http://localhost:8080/api/pokemons`;
       const method = pokemonId ? 'PUT' : 'POST';
 
       const response = await fetch(url, {

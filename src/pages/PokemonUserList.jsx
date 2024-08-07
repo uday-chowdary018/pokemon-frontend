@@ -10,8 +10,8 @@ const PokemonUserList = () => {
   useEffect(() => {
     const fetchPokemonUsers = async () => {
       try {
-      //  const response = await fetch('http://localhost:8080/api/pokemons');
-      const response = await fetch('https://pokemon-backend-production-b16f.up.railway.app/api/pokemons');
+        const response = await fetch('http://localhost:8080/api/pokemons');
+     // const response = await fetch('https://pokemon-backend-production-b16f.up.railway.app/api/pokemons');
      
       const data = await response.json();
         console.log(data);
@@ -30,8 +30,8 @@ const PokemonUserList = () => {
 
   const handleDeleteUser = async (userId) => {
     try {
-    //  await fetch(`http://localhost:8080/api/pokemons/${userId}`, {
-      await fetch(`https://pokemon-backend-production-bdc0.up.railway.app/api/pokemons/${userId}`, {
+        await fetch(`http://localhost:8080/api/pokemons/${userId}`, {
+     // await fetch(`https://pokemon-backend-production-bdc0.up.railway.app/api/pokemons/${userId}`, {
     method: 'DELETE',
       });
       setPokemonUsers(pokemonUsers.filter(user => user.id !== userId));
